@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+
+<h1 align="center">{{ the_title }}</h1>
+
+
+<table>
+<tr><th>Parameter</th><th>Calculated values, cm</th><th>Real values, cm</th><th>Error</th></tr>
+<tr align="center"><td>Chest:</td><td>{{Chest}}</td><td>{{real_chest}}</td><td>{{chest_er}}</td></tr>
+<tr align="center"><td>Waist:</td><td>{{Waist}}</td><td>{{real_waist}}</td><td>{{waist_er}}</td></tr>
+<tr align="center"><td>Hip:</td><td>{{Hip}}</td><td>{{real_hip}}</td><td>{{hip_er}}</td></tr>
+</table>
+
+
+<h2><p align="center">Detected points:</p></h2>
+<p align="center">
+<img src={{url_for('static', filename=url)}} alt="Chart" height={{height}} width={{width}} hspace=40px>
+<img src={{url_for('static', filename=url_2)}} alt="Chart" height={{height_2}} width={{width_2}} hspace=40px>
+</p>
+{% endblock %}

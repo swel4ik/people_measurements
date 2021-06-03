@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1 align="center">{{ the_title }}</h1>
+
+<form method='POST' action='/calc' enctype=multipart/form-data>
+<table>
+<tr><th>Data for measurement</th><th>Real values</th></tr>
+<tr align="center"><td> <label>Height (cm): <input autocomplete=off size="20" name='height_human' type='TEXT' width='60'></label></td><td><label>Chest (cm):<input autocomplete=off name='real_chest' type='TEXT' width='60'></label></td></tr>
+<tr align="center"><td><label>Front photo:&ensp;<input size="20" name='photo1' type='file'></label></td><td><label>Waist (cm):<input autocomplete=off name='real_waist' type='TEXT' width='60'></label></td></tr>
+<tr align="center"><td><label>Profile photo:<input size="20" name='photo2' type='file'></label></td><td><label>Hip (cm):&thinsp;&thinsp;&nbsp;&nbsp;<input autocomplete=off name='real_hip' type='TEXT' width='60'></label></td></tr>
+</table>
+<p align="center"><input value='START' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
+
+
+
